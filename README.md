@@ -27,10 +27,5 @@ Premium care specialist serving distinguished families throughout Seattle. Speci
 - CSS animations and transitions
 - Mobile-first responsive design
 
-## Usage
-1. Download the HTML file
-2. Open in any browser
-3. Host on GitHub Pages, Netlify, or any web hosting service
 
----
 *Refined support for Seattle's most distinguished families*
