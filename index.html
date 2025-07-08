@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nina Teng - The Seattle Nanny | Premium Event Childcare</title>
+    <title>Nina Teng - The Seattle Nanny | Premium Event Care</title>
     <meta name="description" content="Nina Teng provides luxury event childcare for Seattle's most distinguished families. Specializing in weddings, celebrations, and special occasions.">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500&display=swap');
@@ -17,42 +17,27 @@
         body {
             font-family: 'Inter', sans-serif;
             background: #0a0a0a;
-            padding: 40px;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            color: #ffffff;
+            line-height: 1.6;
         }
         
-        .flyer {
-            width: 420px;
-            height: auto;
-            min-height: 750px;
-            background: linear-gradient(145deg, #ffffff 0%, #fefefe 50%, #f8f8f8 100%);
-            position: relative;
-            overflow: visible;
-            box-shadow: 
-                0 40px 80px rgba(0, 0, 0, 0.25),
-                0 0 0 1px rgba(0, 0, 0, 0.05),
-                inset 0 1px 0 rgba(255, 255, 255, 0.9);
-            border-radius: 0;
-            animation: breathe 8s ease-in-out infinite;
-            margin: 20px 0;
-        }
-        
-        @keyframes breathe {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.005); }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         /* Ultra-luxury header */
         .header {
             background: linear-gradient(145deg, #1a1a1a 0%, #000000 100%);
             color: #ffffff;
-            padding: 50px 30px 45px 30px;
+            padding: 80px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
+            width: 100%;
         }
         
         /* Sophisticated texture overlay */
@@ -80,18 +65,18 @@
             content: '';
             position: absolute;
             bottom: 0;
-            left: 30%;
-            right: 30%;
+            left: 40%;
+            right: 40%;
             height: 1px;
             background: linear-gradient(90deg, transparent, #d4af37, transparent);
             opacity: 0.7;
         }
         
         .luxury-tag {
-            font-size: 9px;
+            font-size: clamp(10px, 2vw, 12px);
             color: #cccccc;
             font-weight: 200;
-            letter-spacing: 6px;
+            letter-spacing: clamp(3px, 1vw, 6px);
             text-transform: uppercase;
             margin-bottom: 20px;
             position: relative;
@@ -101,10 +86,10 @@
         
         .main-title {
             font-family: 'Playfair Display', serif;
-            font-size: 54px;
+            font-size: clamp(48px, 12vw, 80px);
             font-weight: 300;
             color: #ffffff;
-            margin-bottom: 8px;
+            margin-bottom: 15px;
             letter-spacing: -2px;
             position: relative;
             z-index: 2;
@@ -112,45 +97,33 @@
         }
         
         .subtitle {
-            font-size: 12px;
+            font-size: clamp(14px, 3vw, 18px);
             color: #e0e0e0;
             font-weight: 300;
-            letter-spacing: 3px;
+            letter-spacing: clamp(2px, 0.5vw, 4px);
             text-transform: uppercase;
             position: relative;
             z-index: 2;
             opacity: 0.9;
         }
         
-        /* Luxurious content area */
-        .content {
-            padding: 45px 30px 40px 30px;
+        /* Premium badge section */
+        .badge-section {
             background: linear-gradient(145deg, #ffffff 0%, #fefefe 100%);
-            position: relative;
+            padding: 60px 0;
+            text-align: center;
         }
         
-        .content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 30px;
-            right: 30px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.08), transparent);
-        }
-        
-        /* Premium badge with gold accent */
         .premium-badge {
             background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
             color: #ffffff;
-            padding: 12px 28px;
+            padding: 20px 40px;
             border-radius: 0;
-            font-size: 9px;
+            font-size: clamp(10px, 2vw, 12px);
             font-weight: 400;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            text-align: center;
-            margin-bottom: 40px;
+            display: inline-block;
             box-shadow: 
                 0 8px 25px rgba(0, 0, 0, 0.15),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -169,52 +142,55 @@
             opacity: 0.6;
         }
         
-        /* Elevated services section */
+        /* Services section */
         .services-section {
-            margin-bottom: 45px;
+            background: linear-gradient(145deg, #ffffff 0%, #fefefe 100%);
+            padding: 80px 0;
+            color: #2a2a2a;
         }
         
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 20px;
+            font-size: clamp(28px, 6vw, 40px);
             font-weight: 400;
             color: #2a2a2a;
-            margin-bottom: 25px;
+            margin-bottom: 60px;
             text-align: center;
             position: relative;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
         }
         
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -12px;
+            bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #2a2a2a, transparent);
-            opacity: 0.3;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            opacity: 0.6;
         }
         
         .services-grid {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
         }
         
         .service-card {
             background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
-            border: 1px solid rgba(2a2a2a);
-            padding: 25px 15px;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 40px 30px;
             text-align: center;
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             position: relative;
             overflow: hidden;
-            flex: 1;
             box-shadow: 
                 0 8px 25px rgba(0, 0, 0, 0.08),
                 inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
         }
         
         .service-card::before {
@@ -229,67 +205,47 @@
         }
         
         .service-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(212, 175, 55, 0.2);
+            transform: translateY(-10px);
+            border-color: rgba(212, 175, 55, 0.3);
             box-shadow: 
-                0 15px 40px rgba(0, 0, 0, 0.12),
-                0 0 0 1px rgba(212, 175, 55, 0.1);
-        }
-        
-        .service-card:hover::before {
-            opacity: 1;
+                0 20px 50px rgba(0, 0, 0, 0.15),
+                0 0 0 2px rgba(212, 175, 55, 0.1);
         }
         
         .service-icon {
-            font-size: 18px;
-            margin-bottom: 12px;
+            font-size: clamp(24px, 5vw, 32px);
+            margin-bottom: 20px;
             display: block;
-            color: #2a2a2a;
-            opacity: 0.7;
+            color: #d4af37;
+            opacity: 0.8;
             position: relative;
             z-index: 2;
         }
         
         .service-text {
-            font-size: 11px;
+            font-size: clamp(16px, 3vw, 20px);
             color: #2a2a2a;
-            font-weight: 400;
+            font-weight: 500;
             letter-spacing: 1px;
-            line-height: 1.4;
             text-transform: uppercase;
             position: relative;
             z-index: 2;
         }
         
-        /* Premium qualifications section - Dark minimalist style */
-        .qualifications {
+        /* Qualifications section - Full width dark */
+        .qualifications-section {
             background: linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%);
-            border: none;
-            padding: 45px 35px;
-            margin-bottom: 40px;
+            padding: 100px 0;
             position: relative;
-            box-shadow: 
-                0 8px 25px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05);
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            border-radius: 4px;
+            overflow: hidden;
         }
         
-        .qualifications:hover {
-            transform: translateY(-3px);
-            box-shadow: 
-                0 15px 40px rgba(0, 0, 0, 0.2),
-                0 0 0 1px rgba(212, 175, 55, 0.2),
-                inset 0 1px 0 rgba(212, 175, 55, 0.1);
-            background: linear-gradient(145deg, #3a3a3a 0%, #2a2a2a 100%);
-        }
-        
-        .qualifications::before {
+        .qualifications-section::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 30%;
-            right: 30%;
+            left: 40%;
+            right: 40%;
             height: 1px;
             background: linear-gradient(90deg, transparent, #d4af37, transparent);
             opacity: 0.4;
@@ -297,49 +253,54 @@
         
         .qual-title {
             font-family: 'Playfair Display', serif;
-            font-size: 20px;
+            font-size: clamp(28px, 6vw, 40px);
             font-weight: 300;
             color: #ffffff;
-            margin-bottom: 35px;
-            letter-spacing: -0.5px;
+            margin-bottom: 60px;
             text-align: center;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 3px;
-            opacity: 0.9;
+        }
+        
+        .qualifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
         }
         
         .qual-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            position: relative;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s ease;
         }
         
-        .qual-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
+        .qual-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(212, 175, 55, 0.2);
+            transform: translateY(-5px);
         }
         
         .qual-number {
             font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            color: #cccccc;
+            font-size: clamp(14px, 3vw, 18px);
+            color: #d4af37;
             font-weight: 300;
             letter-spacing: 2px;
-            margin-right: 25px;
-            min-width: 20px;
-            opacity: 0.7;
-            margin-top: 2px;
+            margin-right: 30px;
+            min-width: 30px;
+            flex-shrink: 0;
+            margin-top: 3px;
         }
         
         .qual-content {
-            font-size: 11px;
+            font-size: clamp(14px, 3vw, 16px);
             color: #e0e0e0;
-            line-height: 1.6;
+            line-height: 1.7;
             font-weight: 300;
             letter-spacing: 0.3px;
             flex: 1;
@@ -350,26 +311,13 @@
             font-weight: 400;
         }
         
-        /* Ultra-luxury contact section */
+        /* Contact section */
         .contact-section {
             background: linear-gradient(145deg, #1a1a1a 0%, #000000 100%);
-            color: white;
-            padding: 35px 0;
-            margin: 0;
+            padding: 100px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            width: 100%;
-        }
-        
-        .contact-section:hover {
-            transform: translateY(-3px);
-            box-shadow: 
-                0 20px 50px rgba(0, 0, 0, 0.4),
-                0 0 0 1px rgba(212, 175, 55, 0.2),
-                inset 0 1px 0 rgba(212, 175, 55, 0.1);
-            background: linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%);
         }
         
         .contact-section::before {
@@ -404,83 +352,156 @@
         
         .contact-title {
             font-family: 'Playfair Display', serif;
-            font-size: 18px;
+            font-size: clamp(28px, 6vw, 40px);
             font-weight: 300;
             color: #ffffff;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             position: relative;
             z-index: 2;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
         }
         
         .contact-info {
-            font-size: 11px;
+            font-size: clamp(18px, 4vw, 24px);
             color: #e0e0e0;
-            margin-bottom: 8px;
+            margin-bottom: 15px;
             font-weight: 300;
             position: relative;
             z-index: 2;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
         
         .contact-highlight {
             background: rgba(255,255,255,0.08);
             border: 1px solid rgba(255,255,255,0.1);
-            padding: 10px 24px;
+            padding: 20px 40px;
             border-radius: 0;
             display: inline-block;
-            margin-top: 15px;
-            font-size: 9px;
-            letter-spacing: 2px;
+            margin-top: 30px;
+            font-size: clamp(12px, 2.5vw, 14px);
+            letter-spacing: 3px;
             text-transform: uppercase;
             position: relative;
             z-index: 2;
             font-weight: 300;
             backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
         }
         
-        /* Ultra-premium hover effect */
-        .flyer:hover {
-            transform: translateY(-5px);
-            box-shadow: 
-                0 50px 100px rgba(0, 0, 0, 0.3),
-                0 0 0 1px rgba(0, 0, 0, 0.08);
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        .contact-highlight:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .header {
+                padding: 60px 0;
+            }
+            
+            .badge-section, .services-section {
+                padding: 60px 0;
+            }
+            
+            .qualifications-section, .contact-section {
+                padding: 80px 0;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .qualifications-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .qual-item {
+                padding: 25px 20px;
+            }
+            
+            .qual-number {
+                margin-right: 20px;
+                min-width: 25px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .services-grid {
+                gap: 20px;
+            }
+            
+            .service-card {
+                padding: 30px 20px;
+            }
+            
+            .qualifications-grid {
+                gap: 20px;
+            }
+            
+            .qual-item {
+                padding: 20px 15px;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .qual-number {
+                margin-right: 0;
+                margin-bottom: 15px;
+                align-self: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="flyer">
-        <div class="header">
+    <!-- Hero Header -->
+    <section class="header">
+        <div class="container">
             <div class="luxury-tag">Exclusive Care</div>
-            <div class="main-title">Nanny</div>
-            <div class="subtitle">Events & Special Occasions</div>
+            <h1 class="main-title">Nanny</h1>
+            <p class="subtitle">Events & Special Occasions</p>
         </div>
-        
-        <div class="content">
+    </section>
+    
+    <!-- Premium Badge -->
+    <section class="badge-section">
+        <div class="container">
             <div class="premium-badge">Refined Support</div>
-            
-            <div class="services-section">
-                <div class="section-title">Tailored Care</div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <span class="service-icon">◆</span>
-                        <div class="service-text">Ceremonies</div>
-                    </div>
-                    <div class="service-card">
-                        <span class="service-icon">◆</span>
-                        <div class="service-text">Celebrations</div>
-                    </div>
-                    <div class="service-card">
-                        <span class="service-icon">◆</span>
-                        <div class="service-text">Occasions</div>
-                    </div>
+        </div>
+    </section>
+    
+    <!-- Services -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Tailored Care</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">◆</span>
+                    <div class="service-text">Ceremonies</div>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">◆</span>
+                    <div class="service-text">Celebrations</div>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">◆</span>
+                    <div class="service-text">Occasions</div>
                 </div>
             </div>
-            
-            <div class="qualifications">
-                <div class="qual-title">Professional Credentials</div>
-                
+        </div>
+    </section>
+    
+    <!-- Qualifications -->
+    <section class="qualifications-section">
+        <div class="container">
+            <h2 class="qual-title">Professional Credentials</h2>
+            <div class="qualifications-grid">
                 <div class="qual-item">
                     <div class="qual-number">01</div>
                     <div class="qual-content">I have had the privilege to be trusted by <span class="qual-highlight">distinguished and diverse families</span> - from healthcare pioneers, technology innovators, and philanthropic leaders to families who value exceptional childcare</div>
@@ -512,13 +533,16 @@
                 </div>
             </div>
         </div>
-        
-        <div class="contact-section">
-            <div class="contact-title">Reserve Your Date</div>
+    </section>
+    
+    <!-- Contact -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="contact-title">Reserve Your Date</h2>
             <div class="contact-info">(206) 851-1627</div>
             <div class="contact-info">Nina Teng</div>
             <div class="contact-highlight">Complimentary Consultation</div>
         </div>
-    </div>
+    </section>
 </body>
 </html>
